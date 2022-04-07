@@ -15,6 +15,8 @@ using Tempalte.Storage.Contexts;
 using Template.Application;
 using Template.Application.Common.Mappings;
 using Template.Application.Interfaces;
+using Template.WebAPI.Middleware;
+using Template.WebAPI.Middleware.BaseMiddleware;
 
 namespace Template.WebAPI
 {
@@ -63,7 +65,8 @@ namespace Template.WebAPI
             {
                 app.UseDeveloperExceptionPage();
             }
-            
+
+            app.UseCustomMiddleware(typeof(CustomExceptionHandlerMiddleware));
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>
