@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ namespace Template.Domain
 {
     public abstract class BaseEntity
     {
-       public Guid PrimaryId { get; set; }
+        public Guid PrimaryId { get; set; }
+        
     }
 }
